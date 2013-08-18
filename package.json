@@ -1,0 +1,22 @@
+{
+  "name": "simple-sampler",
+  "version": "0.0.0",
+  "description": "a simple demonstration of webaudio to build a mpc like sampler",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meandavejustice/simple-sampler.git"
+  },
+  "keywords": [
+    "webaudio",
+    "sampler",
+    "mpc",
+    "audio",
+    ""
+  ],
+  "author": "Dave Justice",
+  "license": "BSD"
+}

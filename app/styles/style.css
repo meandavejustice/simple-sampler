@@ -1,0 +1,30 @@
+.mpc {
+  margin: 30px;
+  margin-top: 100px;
+}
+
+.pads {
+  width: 900px;
+  float: right;
+}
+
+.pads li {
+  box-sizing: border-box;
+  padding: 75px;
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid darkgray;
+  border-right: 4px solid darkgray;
+  border-bottom: 4px solid darkgray;
+  border-radius: 6px;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-user-select: none;
+}
+
+.pads li:active {
+  border-top: 4px solid darkgray;
+  border-right: 2px;
+  border-bottom: 2px;
+  border-left: 4px solid darkgray;
+}
