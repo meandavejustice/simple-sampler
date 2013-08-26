@@ -18,5 +18,8 @@
     ""
   ],
   "author": "Dave Justice",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "connect": "~2.8.5"
+  }
 }
