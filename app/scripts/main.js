@@ -2,6 +2,7 @@ var pads = document.querySelectorAll('.pad');
 var defaultUrls = ['../../examples/2.wav', '../../examples/3.wav', '../../examples/4.wav',
         '../../examples/5.wav', '../../examples/6.wav', '../../examples/7.wav', '../../examples/8.wav',
          '../../examples/9.wav', '../../examples/10.wav', '../../examples/11.wav', '../../examples/12.wav',];
+var keys = ['1', '2', '3', '4', 'q', 'w', 'e', 'r', 'a', 's', 'd', 'f', 'z', 'x', 'c', 'v'];
 var audioContext = audioContext();
 
 function audioContext() {
@@ -18,8 +19,9 @@ function audioContext() {
   return context;
 }
 
-var pad = function(element, url) {
+var pad = function(element, url, key) {
   this.el = element;
+  this.key = key;
   this.url = url;
   this.source = undefined;
   this.buffer = undefined;
@@ -32,6 +34,7 @@ pad.prototype.addListeners = function () {
   this.el.addEventListener('dragover', cancel, false);
   this.el.addEventListener('dragenter', cancel, false);
   this.el.addEventListener('drop', function(evt) { self.uploader.call(self, evt) }, false);
+  Mousetrap.bind(this.key, function(evt) {self.play.call(self, evt) }, false);
 };
 
 pad.prototype.needBuffer = function () {
@@ -113,9 +116,10 @@ function decode(data, success, error) {
 function init() {
   for (var i = 0; i < pads.length; i++) {
     var url = defaultUrls[i];
+    var key = keys[i];
 
     pads[i].setAttribute('data-id', i + 1);
-    var padd = new pad(pads[i], url);
+    var padd = new pad(pads[i], url, key);
   }
 }
 
