@@ -20,7 +20,6 @@
   "author": "Dave Justice",
   "license": "BSD",
   "dependencies": {
-    "connect": "~2.8.5",
-    "mousetrap": "0.0.1"
+    "connect": "~2.8.5"
   }
 }
