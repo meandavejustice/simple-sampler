@@ -46,7 +46,7 @@ pad.prototype.onLoaded = function(source) {
   this.source = audioContext.createBufferSource();
   this.source.buffer = this.buffer;
   this.source.connect(audioContext.destination);
-  this.source.noteOn(audioContext.currentTime);
+  this.source.start(audioContext.currentTime);
 };
 
 pad.prototype.play = function() {
@@ -60,7 +60,7 @@ pad.prototype.play = function() {
 };
 
 pad.prototype.stop = function() {
-  this.source.noteOff(audioContext.currentTime);
+  this.source.stop(audioContext.currentTime);
 };
 
 pad.prototype.uploader = function(e) {
